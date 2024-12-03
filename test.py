@@ -30,7 +30,7 @@ G ='\x1b[0;36m'
 r = requests.get('https://raw.githubusercontent.com/abdo00alo/abdo/main/password').text.strip()
 m = input('Password >> ').strip()
 if r == m:
-	#webbrowser.open("https://t.me/abdelgaf777771")
+	webbrowser.open("https://t.me/abdelgaf777771")
 	print(F+'		Done Password')
 	sleep(2)
 	os.system('clear')
@@ -132,7 +132,10 @@ if r == m:
 				}
 			req = requests.post(url, data=payload, headers=headers)
 			if "true" in req.text:
-				print(F+'Done Add 100 Mega Renewed✅')
+				print("\033[1;31m" + "-" * 50 + "\033[0m")
+				print(F+'	Done Add 100 Mega Renewed✅')
+				print("\033[1;31m" + "-" * 50 + "\033[0m")
+	
 	
 	
 	
@@ -208,7 +211,9 @@ if r == m:
 				#__________________________________________
 								#remaining = int(remaining_value.text)
 								float_value = float(remaining_value.text)
-								if float_value <= 10:
+								gg = 0
+								if float_value <= 20:
+									gg += 1
 									url = "https://mab.etisalat.com.eg:11003/Saytar/rest/servicemanagement/submitOrderV2"
 									payload = "<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><submitOrderRequest><mabOperation></mabOperation><msisdn>%s</msisdn><operation>UNSUBSCRIBE_FANZONE</operation><productName>MAIN_FAN_ZONE</productName></submitOrderRequest>"%num
 									headers = {
@@ -258,7 +263,9 @@ if r == m:
 				}
 										req = requests.post(url, data=payload, headers=headers)
 										if "true" in req.text:
-											print(F+'Done Add 100 Mega Renewed✅')
+											print("\033[1;31m" + "-" * 50 + "\033[0m")
+											print(F+f'[{gg}] Done Add 100 Mega Renewed✅')
+											print("\033[1;31m" + "-" * 50 + "\033[0m")
 										sleep(60)
 			
 			
